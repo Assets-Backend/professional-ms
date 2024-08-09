@@ -13,11 +13,6 @@ model professional {
   professional_id     Int                  @id @default(autoincrement())
   name                String               @db.VarChar(100)
   last_name           String               @db.VarChar(100)
-  profile             String               @unique @db.VarChar(100)
-  phone               String?              @db.VarChar(30)
-  email               String?              @db.VarChar(255)
-  password            String               @db.VarChar(255)
-  gender              gender_options
   deleted_at          DateTime?            @db.Timestamp(6)
   created_at          DateTime             @default(now()) @db.Timestamp(6)
   updated_at          DateTime             @default(now()) @db.Timestamp(6)
@@ -42,18 +37,4 @@ model professional_detail {
 enum fiscal_status {
   monotributista
   responsable_inscripto
-}
-
-enum gender_options {
-  m
-  f
-  M
-  F
-  x
-  X
-}
-
-enum user_types {
-  client
-  clientAdmin
 }

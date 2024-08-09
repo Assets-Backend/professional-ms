@@ -1,0 +1,1 @@
+export { ProfessionalModule } from "./professional/professional.module";
